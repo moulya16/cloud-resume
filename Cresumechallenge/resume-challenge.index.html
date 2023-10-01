@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Moulya - Resume</title>
+  <meta name="description" content="simple CV example created with HTML and CSS">
+  <meta name="author" content="Fly Nerd">
+  <link rel="icon" href="./img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="resume.style.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      
+    </div>
+    <h1>Moulya R Gowda</h1>
+    <section>
+      <p>Hello! I am Moulya. I am a recent graduate who is aspiring to break into cloud.</p>
+     
+      
+      <a href="https://www.linkedin.com/in/moulya-r-gowda" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </section>
+  </header>
+  <main>
+    <section>
+      <h3>Education</h3>
+      <article>
+        <div class='school'>
+          <span>2018-2022</span> <strong>Malnad College of Engineering</strong>
+        </div>
+        <div class="descrition">
+          <p>Bachelors Degree in Engineering (Information Science and Engineering)</p>   CGPA:8.6 
+        </div>
+      </article>
+     
+    </section>
+    <section>
+      <div>
+        <h3>CERTIFICATIONS</h3>
+        <p>AWS Certified Solutions Architect | May, 2023</p>
+        <p>AWS Certified Cloud Practitioner | August,2023</p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </section>
+    <section>
+      <h3>Technical Projects</h3>
+      <article class='course'>
+        <div class='title'>
+          <h4>Cloud Resume Challenge</h4>
+        </div>
+        <div class="descrition">
+          <p>.</p>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>Multi-tier web application</h4>
+        </div>
+        <div class="descrition">
+          <p>Built a highly available and resilient application using EC2, S3, IAM, VPC and other services.</p>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>Event driven architecture</h4>
+        </div>
+        <div class="descrition">
+          <p>Built an event driven architecture with SNS and SQS to implement Pub/Sub model and message filtering.</p>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>Terraform/Kubernetes</h4>
+        </div>
+        <div class="descrition">
+          <p></p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>Experience</h3>
+      <article>
+        <div class='job-title'>
+          <span>04.2022 - 05.2022</span> <strong>Technologics</strong><br> <strong>Position:</strong> Cloud computing Intern
+        </div>
+        <div>
+          <p><strong>Tech stack:</strong>AWS </p>
+          <ul class="job-description">
+            <li>Analyzed the existing architecture and designed a cost optimized solution that cut down costs by 20%.
+              
+              </li>
+            <li>Engineered solutions based on various AWS services like EC2, S3, RDS,IAM.</li>
+            <li>Managed the findings of monitoring tools by streamlining them with alerting tool like SNS</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>Skills</h3>
+      <div class='skills'>
+        <div class='column'>
+          <h4>Technical skills</h4>
+          <ul>
+            <li>AWS CLI</li>
+            <li>Python</li>
+            <li>Terraform</li>
+            <li>Troubleshooting</li>
+          </ul>
+        </div>
+        <div class='column'>
+          <h4>Interpersonal skills</h4>
+          <ul>
+            <li>Effective Communicator</li>
+            <li>Empathetic</li>
+            <li>Adaptable and versatile</li>
+            <li>Active listener</li>
+          </ul>
+        </div>
+      </section>  
+   
+
+    
+   
+  </main>
+  <footer>
+    <p class="counter-number">Views: Loading...</p>
+</footer>
+
+<script>
+    // Place your JavaScript code here
+    const counter = document.querySelector(".counter-number");
+
+    async function updateCounter() {
+        let response = await fetch("https://r5fa56ppqvkeqhaadefokqmyr40obdjf.lambda-url.us-east-1.on.aws/");
+        let data = await response.json();
+        counter.innerHTML = `Views: ${data}`;
+    }
+
+    updateCounter();
+</script>
+</body>
+</html>
+
